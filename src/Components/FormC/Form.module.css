@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700;800&family=Open+Sans:wght@300;700&family=Poppins:wght@100&family=Roboto&display=swap');
 
-
 .formDiv {
     width: 50%;
     margin: auto;
@@ -11,8 +10,7 @@
     font-family: 'Montserrat', sans-serif;
     /* font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
-    font-family: 'Roboto', sans-serif; */
-    
+    font-family: 'Roboto', sans-serif; */   
 }
 
 .formDiv h3 {
@@ -24,6 +22,9 @@ hr {
     color: white;
 }
 
+.form_module {
+    display: flow-root;
+}
 
 .form {
     display: flex;
@@ -35,7 +36,7 @@ hr {
     width: 50%;
     display: flex;
     align-items: center;
-
+    /* min-width: 100%; */
 }
 
 .controls input {
@@ -48,8 +49,10 @@ hr {
 }
 
 .checkbox_container {
-    width: 17px;
-    height: 17px;
+    width: 10px;
+    height: 10px;
+    min-width: 17px;
+    min-height: 17px;
    
 }
 
@@ -77,18 +80,31 @@ hr {
     background-color: #1e40af;
     border-radius: 50%;
     transform: scale(0);
-    transition: all 1s ease;
+    transition: all .5s ease;
 }
 
 input[type='checkbox']:checked + .checkboxLabel::before {
     transform: scale(1);
 }
 
-
 .labeltext {
     font-size: 12px;
     font-weight: bold;
     padding: 10px;
+}
+
+.passwordLength {
+    outline: none;
+    border: 1px solid #1e40af;
+    border-radius: 4px;
+    padding: .25rem;
+}
+
+.spanalert {
+    font-size: 12px;
+    color: #f59e0b;
+    font-weight: 900;
+    font-style: italic;
 }
 
 .form_btn_control button[type='submit'] {
